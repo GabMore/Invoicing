@@ -44,17 +44,31 @@
         <form>
           <div class="example-container">
             <mat-form-field appearance="outline">
-              <mat-label>Nombre del Cliente</mat-label>
+              <mat-label>Nombre</mat-label>
               <input matInput
                      type="text"
-                     placeholder="Nombre del Cliente">
+                     placeholder="Nombre">
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-              <mat-label>Nombre del Producto</mat-label>
+              <mat-label>Obra</mat-label>
               <input matInput
                      type="text"
-                     placeholder="Nombre del Producto">
+                     placeholder="Obra">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Placa</mat-label>
+              <input matInput
+                     type="text"
+                     placeholder="Placa">
+            </mat-form-field> 
+
+            <mat-form-field appearance="outline">
+              <mat-label>Material</mat-label>
+              <input matInput
+                     type="text"
+                     placeholder="Material">
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -73,42 +87,60 @@
           </div>  
         </form>
 
-        <table mat-table>
-          <ng-container matColumnDef="position">
-            <th mat-header-cell> No. </th>
-            <!-- <td mat-cell > 1 </td> -->
-          </ng-container>
-        
-          <ng-container matColumnDef="name">
-            <th mat-header-cell> Cliente </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="name">
-            <th mat-header-cell> Total </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="name">
-            <th mat-header-cell> Fecha </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="name">
-            <th mat-header-cell> Estado </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="name">
-            <th mat-header-cell> Tipo de Pago </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-        </table>
-        
         <button mat-raised-button
                 color="primary"
                 style="margin-right: 8px;">Agregar
-        </button>    
+        </button>  
+
+        <br><br>
+
+        <table mat-table class="mat-elevation-z8">
+          <ng-container matColumnDef="position">
+            <th mat-header-cell> No. </th>
+            <td mat-cell > 1 </td>
+          </ng-container>
+
+          <ng-container matColumnDef="fecha">
+            <th mat-header-cell> Fecha </th>
+            <!-- <td mat-cell > Gabriel </td> -->
+          </ng-container>
+        
+          <ng-container matColumnDef="nombre">
+            <th mat-header-cell> Nombre </th>
+            <!-- <td mat-cell > Gabriel </td> -->
+          </ng-container>
+
+          <ng-container matColumnDef="obra">
+            <th mat-header-cell> Obra </th>
+            <!-- <td mat-cell > Gabriel </td> -->
+          </ng-container>
+
+          <ng-container matColumnDef="placa">
+            <th mat-header-cell> Placa </th>
+            <!-- <td mat-cell > Gabriel </td> -->
+          </ng-container>
+
+          <ng-container matColumnDef="material">
+            <th mat-header-cell> Material </th>
+            <!-- <td mat-cell > Gabriel </td> -->
+          </ng-container>
+
+          <ng-container matColumnDef="cantidad">
+            <th mat-header-cell> Cantidad </th>
+            <!-- <td mat-cell > Gabriel </td> -->
+          </ng-container>
+
+          <ng-container matColumnDef="valor">
+            <th mat-header-cell> Valor </th>
+            <!-- <td mat-cell > Gabriel </td> -->
+          </ng-container>
+        </table>
+
+        <br>
+
+        <div class="total">
+          <p><b>Total</b></p>
+        </div>
 
         <button mat-raised-button
                 color="primary">Guardar Factura

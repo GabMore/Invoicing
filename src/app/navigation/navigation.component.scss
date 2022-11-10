@@ -23,3 +23,13 @@
 .example-container .mat-form-field + .mat-form-field {
   margin-left: 8px;
 }
+
+table {
+  width: 100%;
+}
+
+.total{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
