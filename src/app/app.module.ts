@@ -15,12 +15,14 @@ import { InvoicingComponent } from './invoicing/invoicing.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MaterialsComponent } from './materials/materials.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    InvoicingComponent
+    InvoicingComponent,
+    MaterialsComponent
   ],
   imports: [
     BrowserModule,

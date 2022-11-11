@@ -1,0 +1,97 @@
+<mat-card >
+  <mat-card-header>
+    <mat-card-title>Crear Factura</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <div class="example-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput
+                 type="text"
+                 placeholder="Nombre"
+                 name="nombre"
+                 id="nombre">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Obra</mat-label>
+          <input matInput
+                 type="text"
+                 placeholder="Obra">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Placa</mat-label>
+          <input matInput
+                 type="text"
+                 placeholder="Placa">
+        </mat-form-field> 
+        <mat-form-field appearance="outline">
+          <mat-label>Material</mat-label>
+          <input matInput
+                 type="text"
+                 placeholder="Material">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Cantidad</mat-label>
+          <input matInput
+                 type="number"
+                 placeholder="Cantidad">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Valor</mat-label>
+          <input matInput
+                 type="number"
+                 placeholder="Valor">
+        </mat-form-field>
+      </div>  
+      
+      <button mat-raised-button
+              color="primary"
+              style="margin-right: 8px;">Agregar
+      </button>  
+    </form>
+  <br><br>
+  <table mat-table class="mat-elevation-z8">
+      <ng-container matColumnDef="position">
+        <th mat-header-cell> No. </th>
+        <td mat-cell></td>
+      </ng-container>
+    <ng-container matColumnDef="fecha">
+        <th mat-header-cell> Fecha </th>
+        <td mat-cell></td>
+      </ng-container>
+    
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell> Nombre </th>
+        <td mat-cell></td>
+      </ng-container>
+    <ng-container matColumnDef="obra">
+        <th mat-header-cell> Obra </th>
+        <td mat-cell></td>
+      </ng-container>
+    <ng-container matColumnDef="placa">
+        <th mat-header-cell> Placa </th>
+        <td mat-cell></td>
+      </ng-container>
+    <ng-container matColumnDef="material">
+        <th mat-header-cell> Material </th>
+        <td mat-cell></td>
+      </ng-container>
+    <ng-container matColumnDef="cantidad">
+        <th mat-header-cell> Cantidad </th>
+        <td mat-cell></td>
+      </ng-container>
+    <ng-container matColumnDef="valor">
+        <th mat-header-cell> Valor </th>
+        <td mat-cell></td>
+      </ng-container>
+    </table>
+  <br>
+  <div class="total">
+      <p><b>Total</b></p>
+    </div>
+  <button mat-raised-button
+            color="primary">Guardar Factura
+    </button> 
+  </mat-card-content>
+</mat-card>

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-navigation',
@@ -12,6 +13,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class NavigationComponent {
 
+  nombreInput: string = '';
   route: string = '';
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

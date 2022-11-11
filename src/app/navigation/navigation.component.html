@@ -6,14 +6,14 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item
-         routerLink="invoicing">
+         href="invoicing">
         <mat-icon class="menuIcons">dashboard</mat-icon>
         <span><b>Facturas</b></span>
       </a>
       <a mat-list-item
-         routerLink="products">
+         href="materials">
         <mat-icon class="menuIcons">devices</mat-icon>
-        <span><b>Productos</b></span>
+        <span><b>Materiales</b></span>
       </a>
       <a mat-list-item
          routerLink="statistics">
@@ -35,117 +35,7 @@
       <span>Facturación</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <!-- <app-invoicing *ngIf="this.router.url == '/invoicing'"></app-invoicing> -->
-    <mat-card *ngIf="this.router.url == '/invoicing'">
-      <mat-card-header>
-        <mat-card-title>Crear Factura</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <form>
-          <div class="example-container">
-            <mat-form-field appearance="outline">
-              <mat-label>Nombre</mat-label>
-              <input matInput
-                     type="text"
-                     placeholder="Nombre">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-              <mat-label>Obra</mat-label>
-              <input matInput
-                     type="text"
-                     placeholder="Obra">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-              <mat-label>Placa</mat-label>
-              <input matInput
-                     type="text"
-                     placeholder="Placa">
-            </mat-form-field> 
-
-            <mat-form-field appearance="outline">
-              <mat-label>Material</mat-label>
-              <input matInput
-                     type="text"
-                     placeholder="Material">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-              <mat-label>Cantidad</mat-label>
-              <input matInput
-                     type="number"
-                     placeholder="Cantidad">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-              <mat-label>Valor</mat-label>
-              <input matInput
-                     type="number"
-                     placeholder="Valor">
-            </mat-form-field>
-          </div>  
-        </form>
-
-        <button mat-raised-button
-                color="primary"
-                style="margin-right: 8px;">Agregar
-        </button>  
-
-        <br><br>
-
-        <table mat-table class="mat-elevation-z8">
-          <ng-container matColumnDef="position">
-            <th mat-header-cell> No. </th>
-            <td mat-cell > 1 </td>
-          </ng-container>
-
-          <ng-container matColumnDef="fecha">
-            <th mat-header-cell> Fecha </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-        
-          <ng-container matColumnDef="nombre">
-            <th mat-header-cell> Nombre </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="obra">
-            <th mat-header-cell> Obra </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="placa">
-            <th mat-header-cell> Placa </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="material">
-            <th mat-header-cell> Material </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="cantidad">
-            <th mat-header-cell> Cantidad </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-
-          <ng-container matColumnDef="valor">
-            <th mat-header-cell> Valor </th>
-            <!-- <td mat-cell > Gabriel </td> -->
-          </ng-container>
-        </table>
-
-        <br>
-
-        <div class="total">
-          <p><b>Total</b></p>
-        </div>
-
-        <button mat-raised-button
-                color="primary">Guardar Factura
-        </button> 
-      </mat-card-content>
-    </mat-card>
+    <app-invoicing *ngIf="this.router.url == '/invoicing'"></app-invoicing>
+    <app-materials *ngIf="this.router.url == '/materials'"></app-materials>
   </mat-sidenav-content>
 </mat-sidenav-container>
