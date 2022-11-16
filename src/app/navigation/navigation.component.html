@@ -16,7 +16,7 @@
         <span><b>Materiales</b></span>
       </a>
       <a mat-list-item
-         routerLink="statistics">
+         href="gabriel">
         <mat-icon class="menuIcons">assessment</mat-icon>
         <span><b>Estadisticas</b></span>
       </a>
@@ -37,5 +37,8 @@
     <!-- Add Content Here -->
     <app-invoicing *ngIf="this.router.url == '/invoicing'"></app-invoicing>
     <app-materials *ngIf="this.router.url == '/materials'"></app-materials>
+
+    <!-- <app-facturas></app-facturas>   -->
+
   </mat-sidenav-content>
 </mat-sidenav-container>

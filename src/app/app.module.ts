@@ -16,6 +16,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MaterialsComponent } from './materials/materials.component';
+import { FacturasModule } from './facturas/facturas.module';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,9 @@ import { MaterialsComponent } from './materials/materials.component';
     MatListModule,
     MatCardModule,
     MatFormFieldModule, 
-    MatInputModule
+    MatInputModule, 
+    FacturasModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

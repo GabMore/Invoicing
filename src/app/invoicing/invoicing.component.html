@@ -3,95 +3,114 @@
     <mat-card-title>Crear Factura</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form>
+    <form [formGroup]="userForm" (ngSubmit)="registerUser()">
       <div class="example-container">
+        
         <mat-form-field appearance="outline">
           <mat-label>Nombre</mat-label>
           <input matInput
                  type="text"
                  placeholder="Nombre"
-                 name="nombre"
-                 id="nombre">
+                 formControlName="nombre">
         </mat-form-field>
+        
         <mat-form-field appearance="outline">
           <mat-label>Obra</mat-label>
           <input matInput
                  type="text"
-                 placeholder="Obra">
+                 placeholder="Obra"
+                 formControlName="obra">
         </mat-form-field>
+        
         <mat-form-field appearance="outline">
           <mat-label>Placa</mat-label>
           <input matInput
                  type="text"
-                 placeholder="Placa">
+                 placeholder="Placa"
+                 formControlName="placa">
         </mat-form-field> 
+        
         <mat-form-field appearance="outline">
           <mat-label>Material</mat-label>
           <input matInput
                  type="text"
-                 placeholder="Material">
+                 placeholder="Material"
+                 formControlName="material">
         </mat-form-field>
+        
         <mat-form-field appearance="outline">
           <mat-label>Cantidad</mat-label>
           <input matInput
                  type="number"
-                 placeholder="Cantidad">
+                 placeholder="Cantidad"
+                 formControlName="cantidad">
         </mat-form-field>
+        
         <mat-form-field appearance="outline">
           <mat-label>Valor</mat-label>
           <input matInput
                  type="number"
-                 placeholder="Valor">
+                 placeholder="Valor"
+                 formControlName="valor">
         </mat-form-field>
       </div>  
       
-      <button mat-raised-button
+      <!-- <button mat-raised-button
               color="primary"
               style="margin-right: 8px;">Agregar
-      </button>  
+      </button>   -->
+
+      <button mat-raised-button
+            color="primary"
+            type="submit">Guardar Factura
+      </button> 
     </form>
   <br><br>
   <table mat-table class="mat-elevation-z8">
       <ng-container matColumnDef="position">
         <th mat-header-cell> No. </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element"></td>
       </ng-container>
-    <ng-container matColumnDef="fecha">
+      
+      <ng-container matColumnDef="fecha">
         <th mat-header-cell> Fecha </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element"></td>
       </ng-container>
     
       <ng-container matColumnDef="nombre">
         <th mat-header-cell> Nombre </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element">{{userForm.value.nombre}}</td>
       </ng-container>
-    <ng-container matColumnDef="obra">
+      
+      <ng-container matColumnDef="obra">
         <th mat-header-cell> Obra </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element"></td>
       </ng-container>
-    <ng-container matColumnDef="placa">
+      
+      <ng-container matColumnDef="placa">
         <th mat-header-cell> Placa </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element"></td>
       </ng-container>
-    <ng-container matColumnDef="material">
+      
+      <ng-container matColumnDef="material">
         <th mat-header-cell> Material </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element"></td>
       </ng-container>
-    <ng-container matColumnDef="cantidad">
+      
+      <ng-container matColumnDef="cantidad">
         <th mat-header-cell> Cantidad </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element"></td>
       </ng-container>
-    <ng-container matColumnDef="valor">
+      
+      <ng-container matColumnDef="valor">
         <th mat-header-cell> Valor </th>
-        <td mat-cell></td>
+        <td mat-cell *matCellDef="let element"></td>
       </ng-container>
     </table>
-  <br>
-  <div class="total">
+    <br>
+    <div class="total">
       <p><b>Total</b></p>
     </div>
-  <button mat-raised-button
-            color="primary">Guardar Factura
-    </button> 
+    
   </mat-card-content>
 </mat-card>
