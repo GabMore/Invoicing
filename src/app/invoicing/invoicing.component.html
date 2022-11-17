@@ -3,7 +3,7 @@
       <mat-card-title>Crear Factura</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form formGroup="userForm" (ngSubmit)="registerUser()">
+      <form [formGroup]="userForm" >
         <div class="example-container">
           <mat-form-field appearance="outline">
             <mat-label>Nombre</mat-label>
@@ -56,19 +56,17 @@
         
         <button mat-raised-button
                 color="primary"
-                style="margin-right: 8px;">Agregar
+                style="margin-right: 8px;"
+                type="submit">Agregar
         </button>  
   
-        <button mat-raised-button
-                color="warn"
-                type="submit">Guardar Factura
-        </button> 
+       
       </form>
     <br><br>
     <table mat-table class="mat-elevation-z8">
       <ng-container matColumnDef="position">
         <th mat-header-cell> No. </th>
-        <td mat-cell *matCellDef="let element"></td>
+        <td mat-cell *matCellDef="let element">{{formulario}}</td>
       </ng-container>
       
       <ng-container matColumnDef="fecha">
@@ -105,10 +103,17 @@
         <th mat-header-cell> Valor </th>
         <td mat-cell *matCellDef="let element"></td>
       </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     <br>
     <div class="total">
       <p><b>Total</b></p>
     </div>
+    <button mat-raised-button
+      color="warn"
+      type="submit">Guardar Factura
+    </button> 
   </mat-card-content>
 </mat-card>

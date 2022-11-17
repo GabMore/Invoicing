@@ -1,6 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
+export interface PeriodicElement {
+  nombre: string;
+  obra: string;
+  placa: string;
+  material: string;
+  cantidad: number;
+  valor: number;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {
+    nombre: 'Gabriel', obra: 'obra', placa: 'placa', material: 'material', cantidad: 10, valor: 11
+  },
+  {
+    nombre: 'Gabriel', obra: 'obra', placa: 'placa', material: 'material', cantidad: 10, valor: 11
+  }
+];
+
 @Component({
   selector: 'app-invoicing',
   templateUrl: './invoicing.component.html',
@@ -8,8 +26,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class InvoicingComponent implements OnInit {
 
-  formulario = {};
-
+  formulario: any;
+  
   userForm: FormGroup<{
     nombre: FormControl<string | null>,
     obra: FormControl<string | null>,
@@ -33,9 +51,11 @@ export class InvoicingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registerUser(){
-    this.formulario = this.userForm.value;
-    console.log(this.formulario);
-  }
+  // registerUser(){
+  //   this.formulario = this.userForm.value;
+  //   ELEMENT_DATA.push(this.formulario);
+  // }
 
+  displayedColumns: string[] = ['nombre', 'obra', 'placa', 'material', 'cantidad', 'valor'];
+  dataSource = ELEMENT_DATA;
 }

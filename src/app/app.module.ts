@@ -13,8 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
-import { ReactiveFormsModule } from '@angular/forms';
-
 import { InvoicingModule } from './invoicing/invoicing.module';
 import { MaterialsModule } from './materials/materials.module';
 import { StatisticsModule } from './statistics/statistics.module';
@@ -36,8 +34,7 @@ import { StatisticsModule } from './statistics/statistics.module';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    ReactiveFormsModule,
-    
+        
     MaterialsModule,
     StatisticsModule,
     InvoicingModule
