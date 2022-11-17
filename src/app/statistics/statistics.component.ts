@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
-  selector: 'app-invoicing',
-  templateUrl: './invoicing.component.html',
-  styleUrls: ['./invoicing.component.scss']
+  selector: 'app-statistics',
+  templateUrl: './statistics.component.html',
+  styleUrls: ['./statistics.component.scss']
 })
-export class InvoicingComponent implements OnInit {
+export class StatisticsComponent implements OnInit {
 
   formulario = {};
 
@@ -37,5 +38,4 @@ export class InvoicingComponent implements OnInit {
     this.formulario = this.userForm.value;
     console.log(this.formulario);
   }
-
 }

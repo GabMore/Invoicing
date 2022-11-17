@@ -11,22 +11,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { InvoicingComponent } from './invoicing/invoicing.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MaterialsComponent } from './materials/materials.component';
-import { FacturasModule } from './facturas/facturas.module';
 
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { InvoicingModule } from './invoicing/invoicing.module';
+import { MaterialsModule } from './materials/materials.module';
+import { StatisticsModule } from './statistics/statistics.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    InvoicingComponent,
-    MaterialsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +36,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatFormFieldModule, 
-    MatInputModule, 
-    FacturasModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
+    MaterialsModule,
+    StatisticsModule,
+    InvoicingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
